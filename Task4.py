@@ -44,5 +44,8 @@ tuixiaoyuan = []
 for each in tuixiao:
     if each not in only_encall:
         tuixiaoyuan.append(each)
-sorted(tuixaioyuan)
-print (tuixiaoyuan)
+tuixiaoyuan.sort()
+print ("These numbers could be telemarketers: ")
+for each in tuixiaoyuan:
+    print(each)
+

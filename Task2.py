@@ -39,13 +39,15 @@ for each_call in calls:
         dict_calls[c] = int(int(d) + int(dict_calls[c]))
     else:
         dict_calls[c] = d
-
+list_sum = []
 for key in dict_calls:
     list_sum.append(int(dict_calls[key]))
 list_max = max(list_sum)
-print list_max
+
 
 for k, v in dict_calls.items():
     if v == list_max:
-        print k        
+        q =" %s spent the longest time, %s seconds, on the phone during " %  (k,list_max)
+        print(q)
+        print('September 2016.')
         

@@ -30,6 +30,7 @@ with open('calls.csv', 'r') as f:
  <list of codes>
 代号不能重复，每行打印一条，按字典顺序排序后输出。
 
+
 第二部分: 由班加罗尔固话打往班加罗尔的电话所占比例是多少？
 换句话说，所有由（080）开头的号码拨出的通话中，
 打往由（080）开头的号码所占的比例是多少？
@@ -42,17 +43,11 @@ to other fixed lines in Bangalore."
 dict_calls = {}
 list_2 = []
 for each_call in calls:
-    a = each_call[0]#主叫
     b = each_call[1]#被叫
-    c = a[0:5]
     d = b[0:5]
     if c=='(080)':
         list_2.append(b)
-    if d=='(080)':
-        list_2.append(a)
-
 list_3 = []
-
 for num in list_2:
     u = num[0:1]
     if u=='7'or u=='8' or 'u'==9 :  
@@ -62,24 +57,34 @@ for num in list_2:
         s = num.find(')')
         s = s+1
         list_3.append(num[0:(s)])
-     
-
-    if num[0:3] == '140':
+     if num[0:3] == '140':
         list_3.append(num)
-print(list_3)
+news_list = []
+for num in list_3:
+    if num not in news_list:
+        news_list.append(num)
+print("The numbers called by people in Bangalore have codes:")
+for num in news_list:
+    print(num)
         
 
 
+list_5 = []#主叫080
+for each_call in calls:
+    a = each_call[0]
+    b = each_call[1]
+    d = a[0:5]
+    if d=='(080)':
+        list_5.append(b)
 list_4 = []
-for each_encall in list_2:
+for each_encall in list_5:
     ban = each_encall[0:5]
     if ban == '(080)':
         list_4.append(each_encall)
 
-y=(len(list_4)/len(list_3))
-print ("%.2f%%" % (y * 100))
-            
-    
+y=(len(list_4)/len(list_5))
+y = (y * 100)
+print(" %.2f percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore." % (y))
     
     
     

@@ -25,5 +25,5 @@ for each_num in calls:
     a = list_1.append(each_num[0])
     b = list_1.append(each_num[1])
 list_2 = set(list_1)#去重
-n=len(list_1)
-print(n)
+n=len(list_2)
+print("There are %s different telephone numbers in the records." % (n))
