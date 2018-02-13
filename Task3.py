@@ -43,8 +43,9 @@ to other fixed lines in Bangalore."
 dict_calls = {}
 list_2 = []
 for each_call in calls:
-    b = each_call[1]#被叫
-    d = b[0:5]
+    a = each_call[0]
+    b = each_call[1]
+    c = a[0:5]
     if c=='(080)':
         list_2.append(b)
 list_3 = []
@@ -57,7 +58,7 @@ for num in list_2:
         s = num.find(')')
         s = s+1
         list_3.append(num[0:(s)])
-     if num[0:3] == '140':
+    if num[0:3] == '140':
         list_3.append(num)
 news_list = []
 for num in list_3:

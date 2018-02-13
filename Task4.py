@@ -40,12 +40,17 @@ for each_calls in only_call:
         tuixiao.append(each_calls)
 
 
+
 tuixiaoyuan = []
 for each in tuixiao:
     if each not in only_encall:
         tuixiaoyuan.append(each)
-tuixiaoyuan.sort()
-print ("These numbers could be telemarketers: ")
+new = []
 for each in tuixiaoyuan:
-    print(each)
+    if each not in new:
+        new.append(each)
+new.sort()
+print ("These numbers could be telemarketers: ")
 
+for each in new:
+    print(each)
