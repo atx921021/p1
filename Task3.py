@@ -63,7 +63,7 @@ for num in list_3:
     if num not in news_list:
         news_list.append(num)
 print("The numbers called by people in Bangalore have codes:")
-for num in news_list:
+for num in sorted(news_list):
     print(num)
         
 
