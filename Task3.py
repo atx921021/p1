@@ -51,7 +51,7 @@ for each_call in calls:
 list_3 = []
 for num in list_2:
     u = num[0:1]
-    if u=='7'or u=='8' or 'u'=='9' :  
+    if u=='7'or u=='8' or u=='9' :  
         list_3.append(num[0:4])
     if ')' in num:
         char_1 = ')'
